@@ -9,7 +9,7 @@ type MenuItemProps = {
     };
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
+const SideBarItem: React.FC<MenuItemProps> = ({ item }) => {
   return (
     <Link
       href={item.href}
@@ -22,4 +22,4 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
   );
 };
 
-export default MenuItem;
+export default SideBarItem;

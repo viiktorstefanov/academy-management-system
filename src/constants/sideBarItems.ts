@@ -9,7 +9,7 @@ import { MdOutlineEvent  } from "react-icons/md";
 import { BiTask } from "react-icons/bi";
 import { FaRegClipboard } from "react-icons/fa";
 
-export const menuItems = [
+export const SideBarItems = [
     {
         icon: IoHomeOutline,
         label: "Home",
@@ -83,7 +83,7 @@ export const menuItems = [
       },
 ];
 
-export const otherMenuItems = [
+export const otherSideBarItems = [
   {
     icon: CgProfile,
     label: "Profile",
