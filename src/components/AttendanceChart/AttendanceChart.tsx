@@ -16,22 +16,27 @@ import {
 
 const data = [
   {
-    name: "Mon",
+    name: "Monday",
     present: 23,
     absent: 53,
   },
   {
-    name: "Tue",
+    name: "Tuesday",
     present: 64,
     absent: 43,
   },
   {
-    name: "Wed",
+    name: "Wednesday",
     present: 33,
     absent: 56,
   },
   {
-    name: "Fri",
+    name: "Thursday",
+    present: 33,
+    absent: 56,
+  },
+  {
+    name: "Friday",
     present: 33,
     absent: 55,
   },
@@ -39,38 +44,35 @@ const data = [
 
 const AttendanceChart = () => {
   return (
-    <div>
-      <div>
-        <h1>Attendance</h1>
+    <div className="bg-white rounded-lg p-4 h-full">
+      <div className="flex justify-between items-center">
+        <h1 className="text-lg font-semibold">Attendance</h1>
         <HiOutlineDotsHorizontal className="flex justify-end w-6 h-6" />
       </div>
 
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="90%">
         <BarChart
           width={500}
           height={300}
           data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
+          barSize={20}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
+          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#ddd"/>
+          <XAxis dataKey="name" axisLine={false} tick={{fill: "#d1d5db"}} tickLine={false} />
+          <YAxis axisLine={false} tick={{fill: "#d1d5db"}} tickLine={false} />
+          <Tooltip contentStyle={{borderRadius: "10px", borderColor: "lightgray"}}/>
+          <Legend align="left" verticalAlign="top" wrapperStyle={{paddingTop: "20px", paddingBottom: "40px"}}/>
           <Bar
-            dataKey="pv"
-            fill="#8884d8"
-            activeBar={<Rectangle fill="pink" stroke="blue" />}
+            dataKey="present"
+            fill="#FAE27C"
+            legendType="circle"
+            radius={[10, 10, 0, 0]}
           />
           <Bar
-            dataKey="uv"
-            fill="#82ca9d"
-            activeBar={<Rectangle fill="gold" stroke="purple" />}
+            dataKey="absent"
+            fill="#C3EBFA"
+            legendType="circle"
+            radius={[10, 10, 0, 0]}
           />
         </BarChart>
       </ResponsiveContainer>
