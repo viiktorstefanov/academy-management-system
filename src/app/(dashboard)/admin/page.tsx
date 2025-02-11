@@ -1,3 +1,4 @@
+import AdminEvents from "@/components/AdminEvents/AdminEvents";
 import AttendanceChart from "@/components/AttendanceChart/AttendanceChart";
 import EventCalendar from "@/components/EventCalendar/EventCalendar";
 import FinanceChart from "@/components/FinanceChart/FinanceChart";
@@ -27,8 +28,9 @@ const AdminPage = () => {
           <FinanceChart />
         </div>
       </div>
-      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+      <div className="w-full lg:w-1/3 flex flex-col gap-4">
         <EventCalendar />
+        <AdminEvents />
       </div>
     </div>
   );
