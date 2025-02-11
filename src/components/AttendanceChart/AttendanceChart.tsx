@@ -5,7 +5,6 @@ import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import {
   BarChart,
   Bar,
-  Rectangle,
   XAxis,
   YAxis,
   CartesianGrid,
