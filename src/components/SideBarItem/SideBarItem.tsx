@@ -14,7 +14,7 @@ const SideBarItem: React.FC<MenuItemProps> = ({ item }) => {
     <Link
       href={item.href}
       key={item.label}
-      className="flex justify-center items-center lg:justify-start gap-4 text-gray-500 py-2"
+      className="flex justify-center items-center lg:justify-start gap-4 text-gray-500 py-2 md:px-2 rounded-md hover:bg-sky"
     >
       <item.icon data-tip="Hello, I'm a tooltip!" className="text-red-400 w-5 h-5" />
       <span className="hidden lg:block">{item.label}</span>
